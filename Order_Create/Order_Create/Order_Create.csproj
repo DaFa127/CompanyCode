@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5EF230A3-7F45-4BC1-8D4F-894248A80162}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Order_Create</RootNamespace>
+    <AssemblyName>Order_Create</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>OrderCreate.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonFunc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AP\C_~_DLL\CommonFunc.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.7.10\lib\net40-client\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\AP\C_~_DLL\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JiaLiuPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JiaLiuPlan.Designer.cs">
+      <DependentUpon>JiaLiuPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order_BarCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_BarCode.Designer.cs">
+      <DependentUpon>Order_BarCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_Create.Designer.cs">
+      <DependentUpon>Order_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Create_Temp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_Create_Temp.Designer.cs">
+      <DependentUpon>Order_Create_Temp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plan_Day.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan_Day.Designer.cs">
+      <DependentUpon>Plan_Day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Posting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Posting.Designer.cs">
+      <DependentUpon>Posting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="OrderCreate.ico" />
+    <EmbeddedResource Include="JiaLiuPlan.resx">
+      <DependentUpon>JiaLiuPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_BarCode.resx">
+      <DependentUpon>Order_BarCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_Create.resx">
+      <DependentUpon>Order_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_Create_Temp.resx">
+      <DependentUpon>Order_Create_Temp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan_Day.resx">
+      <DependentUpon>Plan_Day.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Posting.resx">
+      <DependentUpon>Posting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="C_Dll_Login">
+      <Guid>{B750354E-8F34-4D7C-A64E-0F5D84B74E1F}</Guid>
+      <VersionMajor>37</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
