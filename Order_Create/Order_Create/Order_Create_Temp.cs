@@ -250,6 +250,11 @@ namespace Order_Create
                             drdgv["SO_TYPE"] = "ZP02";
                             drdgv["LOCATION"] = "50R1";
                         }
+                        else if (stge == "B")
+                        {
+                            drdgv["SO_TYPE"] = "ZP03";
+                            drdgv["LOCATION"] = "50F2";
+                        }
                         else
                         {
                             drdgv["SO_TYPE"] = "ZP01";

@@ -389,7 +389,7 @@ namespace Order_Create
                         strsb_cr2_insert.Append("@LOCATION" + "," + "@WORK_CENTER" + "," + "@CREATED_TIME" + "," + "@STATUS" + ")");
                         ConnDB.ExcuteSQL(strsb_cr2_insert, db.DB_CSTS5, paras_cr2);
                     }
-                }
+                } 
             }
             else
             {
